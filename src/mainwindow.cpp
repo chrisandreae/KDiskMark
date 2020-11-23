@@ -494,6 +494,7 @@ void MainWindow::on_comboBox_Dirs_currentIndexChanged(int index)
     if (index == 0) {
         QFileDialog dialog;
         dialog.setOption(QFileDialog::ShowDirsOnly, true);
+        dialog.setFileMode(QFileDialog::Directory);
 
         if (dialog.exec()) {
             QString path = dialog.directory().path();
